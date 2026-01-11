@@ -1,252 +1,169 @@
-# 👑 Dotfiles & System Bootstrap
+# ⚙️ Configs — My Linux Setup, Automated
 
-> **One command. One repo. A fully working system.**
+Welcome to **Configs** 👋✨
+This repository contains my **personal Linux configuration** and a **fully automated installer** to recreate my system on any fresh machine.
 
-This repository exists to **reproduce my complete Linux environment** — terminal, editor, shell, desktop behavior, and tooling — on any fresh Ubuntu machine with **minimum friction and maximum clarity**.
+> 🧠 Think of this repo as *"infrastructure as dotfiles"* — opinionated, reproducible, and evolving.
 
-Everything here is intentional.
-Nothing is implicit.
+⚠️ **Status:** This project is **actively under development**.
+Things may change, improve, or break — and that’s intentional 🚧
+
+Contributions, suggestions, and ideas are **very welcome** 🤝💙
 
 ---
 
-## 🚀 One-Command Installation
+## 🚀 One‑Command Installation
 
-The goal of this repository is simple:
-
-> **Clone the repo and set up the entire system with a single command.**
+Clone the repository (always from the **main** branch) and run the installer:
 
 ```bash
-curl -fsSL https://raw.githubusercontent.com/<your-username>/dotfiles/main/installer.sh | bash
+git clone -b main https://github.com/Theyashsawarkar/Configs.git ~/dotfiles \
+  && cd ~/dotfiles \
+  && chmod +x installer/install.sh \
+  && ./installer/install.sh
 ```
 
-What this command will do:
-
-1. Install and configure **nala**
-2. Install all required **system packages**
-3. Set up **Flatpak + Flathub**
-4. Install required **CLI tools, runtimes, and utilities**
-5. Install **Docker (official packages)**
-6. Install **GNOME extension tooling**
-7. Clone this repository
-8. Apply all **dotfiles using GNU Stow**
-
-➡️ After this finishes, the system is ready to use.
+That’s it ✨☕
+The installer will take care of almost everything automatically.
 
 ---
 
-## 🧠 Why This Repository Exists
+## 🧩 What this setup gives you
 
-Modern Linux setups fail for three reasons:
-
-1. Config files without documented dependencies
-2. Manual installs that are forgotten over time
-3. "Works on my machine" assumptions
-
-This repository solves that by:
-
-* Treating **the system as code**
-* Separating **configuration** from **installation**
-* Making every dependency **explicit and reproducible**
-* Favoring **clarity over cleverness**
-
-The result is a setup that can be:
-
-* Rebuilt from scratch
-* Audited
-* Extended
-* Trusted
+✔ A fully configured **developer‑friendly Linux system**
+✔ Clean, fast **terminal & shell experience**
+✔ Modern CLI tools replacing legacy Unix defaults
+✔ Structured, maintainable dotfiles using GNU Stow
+✔ Modular installer scripts (easy to extend later)
 
 ---
 
-## 🧩 What This Repository Manages
+## 🛠️ Installer overview
 
-### ✔ Managed
-
-* Shell, terminal, editor, git, tmux configs
-* CLI tooling and developer utilities
-* Desktop workflow (GNOME extensions + behavior)
-* Language runtimes required by tooling
-
-### ✖ Not Managed
-
-* Kernel / bootloader
-* Hardware drivers
-* Ubuntu base packages
-* User data
-
----
-
-## 📦 System Dependencies
-
-> This section is **authoritative**. The installer installs exactly what is listed here.
-
----
-
-### 🖥️ Package Management
-
-* `nala`
-* `apt-transport-https`
-* `ca-certificates`
-* `software-properties-common`
-* `gnupg`
-
----
-
-### 🧑‍💻 Core CLI Utilities
-
-#### File Navigation & Search
-
-* `yazi` *(installed via cargo)*
-* `zoxide`
-* `bat`
-* `eza`
-* `fzf`
-* `fd-find`
-* `ripgrep`
-
-#### Core Unix Tools
-
-* `curl`
-* `wget`
-* `jq`
-* `tree`
-* `zip`
-* `unzip`
-* `grep`
-
----
-
-### 🧑‍💻 Development Tooling
-
-#### Version Control
-
-* `git`
-* `lazygit`
-
-#### Compilers & Toolchains
-
-* `build-essential`
-* `cargo` (Rust toolchain)
-* `rust-analyzer`
-* `clangd`
-
-#### Node.js (via NVM)
-
-* `nodejs` *(installed via nvm)*
-* Global npm packages:
-
-  * `neovim`
-
----
-
-### 🖥️ Terminal & Shell
-
-* `kitty`
-* `tmux`
-* `zsh`
-* `starship`
-* `zsh-autosuggestions`
-* `zsh-syntax-highlighting`
-* `wl-clipboard`
-
----
-
-### ✨ Neovim (LazyVim)
-
-* `neovim` (>= 0.9)
-
-External plugin dependencies:
-
-* `git`
-* `ripgrep`
-* `fd-find`
-* `nodejs`
-* `python3`
-
----
-
-### 🐳 Containers
-
-Installed from official Docker repositories:
-
-* `docker-ce`
-* `docker-ce-cli`
-* `containerd.io`
-* `docker-buildx-plugin`
-* `docker-compose-plugin`
-
----
-
-### 📦 Flatpak & AppImage Support
-
-* `flatpak`
-* `gnome-software-plugin-flatpak`
-* `libfuse2`
-
-Flatpak apps installed:
-
-* `md.obsidian.Obsidian`
-
----
-
-### 🖥️ GNOME Desktop
-
-#### Core Utilities
-
-* `gnome-tweaks`
-* `dconf-cli`
-* `gnome-shell-extensions`
-* `gnome-shell-extension-manager`
-
-#### GNOME Extensions (User-Installed)
-
-* Forge
-* Simple Workspaces Bar
-* Disable Workspace Switcher
-* Blur My Shell
-* Clipboard Indicator
-* Caffeine
-* Bing Wallpaper
-* Net Speed Simplified
-* Lock Keys
-
----
-
-## 📁 Repository Structure
+The installer is split into **small, ordered scripts**:
 
 ```text
-dotfiles/
-├── nvim/
-├── tmux/
-├── zsh/
-├── git/
-├── kitty/
-├── installer.sh
-└── README.md
+installer/
+├── 00-preflight.sh   → sanity checks & sudo
+├── 01-system.sh      → core system packages
+├── 02-dev.sh         → dev tools (node, rust, yazi, etc.)
+├── 03-shell.sh       → zsh, oh-my-zsh, powerlevel10k
+├── 04-ui.sh          → fonts, kitty, UI tools
+├── 05-dotfiles.sh    → GNU stow & symlinks
+├── 06-cleanup.sh     → cleanup + reboot prompt
+├── install.sh        → master runner
+├── guide.md          → 📘 detailed documentation
 ```
 
-All configuration is applied using **GNU Stow**.
+📌 Scripts run **automatically in numeric order** (`00 → 99`).
 
 ---
 
-## 🔁 Rebuilding the System
+## 📦 Packages & tools installed
 
-On a fresh Ubuntu install:
+Below is a **high‑level overview** of what gets installed and *why* 👇
 
-```bash
-curl -fsSL https://raw.githubusercontent.com/<your-username>/dotfiles/main/installer.sh | bash
-```
+### 🖥️ Core system & utilities
 
-No manual steps required.
+| Package           | Why it exists                           |
+| ----------------- | --------------------------------------- |
+| `nala`            | Faster, cleaner frontend for apt 📦     |
+| `curl`, `wget`    | Network & download utilities 🌐         |
+| `build-essential` | Required for compiling native tools 🛠️ |
+| `ca-certificates` | Secure HTTPS communication 🔐           |
+| `stow`            | Dotfile symlink management 🔗           |
+| `ripgrep`         | Lightning‑fast text search 🔍           |
+| `fd-find`         | Better, simpler `find` 🔎               |
+| `eza`             | Modern replacement for `ls` 📁          |
+| `bat`             | Syntax‑highlighted `cat` 📄             |
+| `fzf`             | Fuzzy finder everywhere ⚡               |
+| `btop`            | Modern system monitor 📊                |
+| `httpie`          | Human-friendly HTTP client for APIs 🌐⚡ |
 
 ---
 
-## 🧭 Philosophy
+### 👨‍💻 Developer tools
 
-* Explicit over implicit
-* Reproducible over convenient
-* Simple over clever
-* Auditable over magical
+(Yes, `httpie` is non-negotiable 😄)
 
-👑 *A system you understand is a system you control.*
+| Tool               | Purpose                                   |
+| ------------------ | ----------------------------------------- |
+| `git`              | Version control 🧠                        |
+| `neovim`           | Primary editor (LazyVim based) ✍️         |
+| `tmux`             | Terminal multiplexing 🪟                  |
+| `lazygit`          | TUI Git client 🌱                         |
+| `nodejs` + `npm`   | JavaScript ecosystem ⚙️                   |
+| `cargo` / `rustup` | Rust tooling 🦀                           |
+| `docker` + plugins | Containers & dev environments 🐳          |
+| `yazi`             | Terminal file manager (binary install) 📂 |
+
+---
+
+### 🐚 Shell & terminal
+
+| Tool           | Why                                  |
+| -------------- | ------------------------------------ |
+| `zsh`          | Default shell 🐚                     |
+| Oh My Zsh      | Plugin & config framework ✨          |
+| Powerlevel10k  | Fast, minimal, informative prompt 🚀 |
+| `zoxide`       | Smarter `cd` 🧭                      |
+| `wl-clipboard` | Clipboard support (Wayland) 📋       |
+| `kitty`        | GPU‑accelerated terminal emulator ⚡  |
+
+---
+
+### 🎨 UI, fonts & desktop
+
+| Tool                      | Purpose                          |
+| ------------------------- | -------------------------------- |
+| Nerd Fonts                | Icons & glyphs for terminal 💠   |
+| ComicShannsMono Nerd Font | My preferred terminal font 😄    |
+| GNOME Extensions          | Productivity & visuals 🧩        |
+| Flatpak                   | App distribution & sandboxing 📦 |
+| Obsidian (Flatpak)        | Notes & knowledge base 🧠        |
+
+---
+
+## 🔗 Dotfiles management
+
+All configuration files live inside this repo and are applied using **GNU Stow**.
+
+```text
+~/.zshrc  →  ~/dotfiles/zsh/.zshrc
+```
+
+🧠 Editing files in `$HOME` edits the **real files in this repo**.
+
+---
+
+## 🔄 Reboot & post‑install
+
+At the end of the setup:
+
+* You’ll be asked whether to **reboot** 🔄
+* Reboot is **recommended** (Docker groups, shell changes)
+
+---
+
+## 🤝 Contributing
+
+This is a **personal project**, but:
+
+* 💡 Suggestions are welcome
+* 🐛 Issues & fixes are appreciated
+* 🔧 PRs are encouraged
+
+If something looks interesting or useful — feel free to jump in 🚀
+
+---
+
+## 🧭 Final note
+
+This repo is **not static**.
+
+> It evolves as my workflow evolves.
+
+If you’re reading this — you’re looking at a **living system** 🌱
+
+Happy hacking! 😄✨
 

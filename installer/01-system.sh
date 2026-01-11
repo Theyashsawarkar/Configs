@@ -11,6 +11,7 @@ SYSTEM_PACKAGES=(
   build-essential
   ca-certificates
   curl
+  httpie
   wget
   gnupg
   lsb-release
