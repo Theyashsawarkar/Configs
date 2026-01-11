@@ -1,24 +1,5 @@
 # 🧪 Testing Guide
 
-<!--toc:start-->
-
-- [🧪 Testing Guide](#🧪-testing-guide)
-  - [🐳 1. Docker Testing (CLI & Script Validation)](#🐳-1-docker-testing-cli-script-validation)
-    - [✅ What you can test](#what-you-can-test)
-    - [📦 Docker Image (Ubuntu)](#📦-docker-image-ubuntu)
-    - [▶️ Run Container](#️-run-container)
-    - [🔧 Inside the container](#🔧-inside-the-container)
-    - [🧠 What to observe](#🧠-what-to-observe)
-  - [🖥️ 2. GNOME Boxes (Full System Test) ⭐ Recommended](#🖥️-2-gnome-boxes-full-system-test-recommended)
-    - [🔧 Install GNOME Boxes (Host Machine)](#🔧-install-gnome-boxes-host-machine)
-    - [📀 Create Test VM](#📀-create-test-vm)
-    - [🧪 Inside the VM](#🧪-inside-the-vm)
-    - [✅ What to verify](#what-to-verify)
-    - [📸 Snapshots (Highly Recommended)](#📸-snapshots-highly-recommended)
-  - [🧠 Suggested Testing Workflow](#🧠-suggested-testing-workflow)
-  - [🚧 Under Development](#🚧-under-development)
-  <!--toc:end-->
-
 This document explains **how to safely test this dotfiles + installer setup** before using it on your real machine.
 We use **two testing strategies**:
 
