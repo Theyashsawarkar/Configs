@@ -1,26 +1,26 @@
 [
   /*
    * ==========================================================================
-   * GLOBAL / WORKSPACE LEVEL
+   *                        GLOBAL / WORKSPACE LEVEL
    * ==========================================================================
    */
   {
     "context": "Workspace",
     "bindings": {
-      "alt-e": "workspace::ToggleLeftDock"
-    }
+      "alt-e": "workspace::ToggleLeftDock",
+    },
   },
   {
     "context": "EmptyPane || SharedScreen",
     "bindings": {
       "space f": "file_finder::Toggle",
-      "space d u": "workspace::ToggleBottomDock"
-    }
+      "space d u": "workspace::ToggleBottomDock",
+    },
   },
 
   /*
    * ==========================================================================
-   * VIM NORMAL & VISUAL MODE
+   *                          VIM NORMAL & VISUAL MODE
    * ==========================================================================
    */
   {
@@ -62,31 +62,31 @@
 
       // ---------- Editing ----------
       "alt-shift-k": "editor::MoveLineUp",
-      "alt-shift-j": "editor::MoveLineDown"
-    }
+      "alt-shift-j": "editor::MoveLineDown",
+    },
   },
 
   /*
    * ==========================================================================
-   * VIM INSERT MODE
+   *                            VIM INSERT MODE
    * ==========================================================================
    */
   {
     "context": "vim_mode == insert",
     "bindings": {
-      "j k": "vim::NormalBefore"
-    }
+      "j k": "vim::NormalBefore",
+    },
   },
 
   /*
    * ==========================================================================
-   * DOCKS & TERMINALS
+   *                              DOCKS & TERMINALS
    * ==========================================================================
    */
   {
     "context": "Dock && !menu",
     "bindings": {
-      "space d u": "workspace::ToggleBottomDock"
-    }
-  }
+      "space d u": "workspace::ToggleBottomDock",
+    },
+  },
 ]

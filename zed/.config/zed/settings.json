@@ -1,7 +1,7 @@
 {
   /*
    * ==========================================================================
-   * EDITOR CORE & VIM BEHAVIOR
+   *                      EDITOR CORE & VIM BEHAVIOR
    * ==========================================================================
    */
   "vim_mode": true,
@@ -15,17 +15,17 @@
 
   /*
    * ==========================================================================
-   * AI & AGENT RESTRICTIONS (DISABLED)
+   *                  AI & AGENT RESTRICTIONS (DISABLED)
    * ==========================================================================
    */
   "disable_ai": true,
   "agent": {
-    "button": false
+    "button": false,
   },
 
   /*
    * ==========================================================================
-   * TYPOGRAPHY & FONTS
+   *                            TYPOGRAPHY & FONTS
    * ==========================================================================
    */
   "ui_font_size": 12,
@@ -34,52 +34,52 @@
   "buffer_font_family": "ComicShannsMono Nerd Font Mono",
   "terminal": {
     "font_family": "ComicShannsMono Nerd Font Mono",
-    "font_size": 12
+    "font_size": 12,
   },
 
   /*
    * ==========================================================================
-   * VISUAL THEME & UI SURFACES
+   *                        VISUAL THEME & UI SURFACES
    * ==========================================================================
    */
   "theme": {
     "mode": "dark",
     "light": "One Light",
-    "dark": "Aura Dark"
+    "dark": "Aura Dark",
   },
   "icon_theme": "Warm Charmed Icons",
   "scrollbar": {
-    "show": "never"
+    "show": "never",
   },
   "title_bar": {
-    "show_onboarding_banner": false
+    "show_onboarding_banner": false,
   },
   "tab_bar": {
-    "show_tab_bar_buttons": false
+    "show_tab_bar_buttons": false,
   },
   "toolbar": {
-    "quick_actions": false
+    "quick_actions": false,
   },
   "gutter": {
-    "min_line_number_digits": 0
+    "min_line_number_digits": 0,
   },
 
   /*
    * ==========================================================================
-   * PROJECT PANEL & NAVIGATION
+   *                        PROJECT PANEL & NAVIGATION
    * ==========================================================================
    */
   "project_panel": {
     "auto_fold_dirs": false,
     "starts_open": false,
     "scrollbar": {
-      "show": "never"
-    }
+      "show": "never",
+    },
   },
 
   /*
    * ==========================================================================
-   * THEME OVERRIDES (AURA DARK)
+   *                          THEME OVERRIDES (AURA DARK)
    * ==========================================================================
    */
   "theme_overrides": {
@@ -90,12 +90,12 @@
       "panel.focused_border": "#4E466E",
       "syntax": {
         "comment": {
-          "font_style": "italic"
+          "font_style": "italic",
         },
         "comment.doc": {
-          "font_style": "italic"
-        }
-      }
-    }
-  }
+          "font_style": "italic",
+        },
+      },
+    },
+  },
 }
