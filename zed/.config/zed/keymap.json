@@ -1,0 +1,92 @@
+[
+  /*
+   * ==========================================================================
+   * GLOBAL / WORKSPACE LEVEL
+   * ==========================================================================
+   */
+  {
+    "context": "Workspace",
+    "bindings": {
+      "alt-e": "workspace::ToggleLeftDock"
+    }
+  },
+  {
+    "context": "EmptyPane || SharedScreen",
+    "bindings": {
+      "space f": "file_finder::Toggle",
+      "space d u": "workspace::ToggleBottomDock"
+    }
+  },
+
+  /*
+   * ==========================================================================
+   * VIM NORMAL & VISUAL MODE
+   * ==========================================================================
+   */
+  {
+    "context": "VimControl && !menu",
+    "bindings": {
+      // ---------- LSP / Code Actions ----------
+      "shift-k": "editor::Hover",
+      "space c f": "editor::Format",
+      "space c r": "editor::Rename",
+      "space o": "outline::Toggle",
+
+      // ---------- Navigation & UI ----------
+      "space f": "file_finder::Toggle",
+      "space b": "tab_switcher::Toggle",
+      "space e": "project_panel::ToggleFocus",
+      "space j": "workspace::ToggleBottomDock",
+
+      // ---------- Pane Management ----------
+      "space w h": "pane::SplitHorizontal",
+      "space w v": "pane::SplitVertical",
+      "space w c": "pane::CloseActiveItem",
+
+      "ctrl-h": "workspace::ActivatePaneLeft",
+      "ctrl-l": "workspace::ActivatePaneRight",
+      "ctrl-k": "workspace::ActivatePaneUp",
+      "ctrl-j": "workspace::ActivatePaneDown",
+
+      // ---------- Debugger (DAP) ----------
+      "space d s": "debugger::Start",
+      "space d c": "debugger::Continue",
+      "space d shift-r": "debugger::Restart",
+      "space d r": "debugger::Rerun",
+      "space d b": "editor::ToggleBreakpoint",
+      "space d n": "debugger::StepOver",
+      "space d i": "debugger::StepInto",
+      "space d o": "debugger::StepOut",
+      "space d x": "debugger::Stop",
+      "space d u": "workspace::ToggleBottomDock",
+
+      // ---------- Editing ----------
+      "alt-shift-k": "editor::MoveLineUp",
+      "alt-shift-j": "editor::MoveLineDown"
+    }
+  },
+
+  /*
+   * ==========================================================================
+   * VIM INSERT MODE
+   * ==========================================================================
+   */
+  {
+    "context": "vim_mode == insert",
+    "bindings": {
+      "j k": "vim::NormalBefore"
+    }
+  },
+
+  /*
+   * ==========================================================================
+   * DOCKS & TERMINALS
+   * ==========================================================================
+   */
+  {
+    "context": "Dock && !menu",
+    "bindings": {
+      "space d u": "workspace::ToggleBottomDock"
+    }
+  }
+]
