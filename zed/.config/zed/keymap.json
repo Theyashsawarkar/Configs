@@ -35,9 +35,13 @@
 
       // ---------- Navigation & UI ----------
       "space f": "file_finder::Toggle",
-      "space b": "tab_switcher::Toggle",
       "space e": "project_panel::ToggleFocus",
       "space j": "workspace::ToggleBottomDock",
+
+      // --------- Buffers or tabs navigation ---------
+      "space b n": "pane::ActivateNextItem",
+      "space b p": "pane::ActivatePreviousItem",
+      "space b b": "pane::ActivateLastItem",
 
       // ---------- Pane Management ----------
       "space w h": "pane::SplitHorizontal",
