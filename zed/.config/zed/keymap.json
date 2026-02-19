@@ -48,6 +48,12 @@
       "ctrl-k": "workspace::ActivatePaneUp",
       "ctrl-j": "workspace::ActivatePaneDown",
 
+      // ---------- Pane Resizing ----------
+      "ctrl-shift-h": "vim::ResizePaneLeft",
+      "ctrl-shift-l": "vim::ResizePaneRight",
+      "ctrl-shift-j": "vim::ResizePaneDown",
+      "ctrl-shift-k": "vim::ResizePaneUp",
+
       // ---------- Debugger (DAP) ----------
       "space d s": "debugger::Start",
       "space d c": "debugger::Continue",
