@@ -34,11 +34,12 @@
       "space c a": "editor::ToggleCodeActions",
 
       // ---------- Navigation & UI ----------
-      "space f": "file_finder::Toggle",
+      "space f f": "file_finder::Toggle",
       "space e": "project_panel::ToggleFocus",
       "space j": "workspace::ToggleBottomDock",
 
       // --------- Buffers or tabs navigation ---------
+      "space f b": "tab_switcher::Toggle",
       "space b n": "pane::ActivateNextItem",
       "space b p": "pane::ActivatePreviousItem",
       "space b b": "pane::ActivateLastItem",
