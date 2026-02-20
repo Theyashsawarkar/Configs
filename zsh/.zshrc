@@ -1,3 +1,6 @@
+
+typeset -g POWERLEVEL9K_INSTANT_PROMPT=quiet
+
 ########################################
 # Powerlevel10k Instant Prompt (FAST)
 ########################################
