@@ -40,6 +40,10 @@
       "space f f": "file_finder::Toggle",
       "space e": "project_panel::ToggleFocus",
 
+      // ---------- SEARCH ----------
+      "space s g": "pane::DeploySearch", // Search Global (Project-wide)
+      "space s b": "buffer_search::Deploy", // Search in Buffer (Current File)
+
       // --------- Buffers or tabs navigation ---------
       "space f b": "tab_switcher::Toggle",
       "space b n": "pane::ActivateNextItem",
