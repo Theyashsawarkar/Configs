@@ -1,6 +1,4 @@
 
-typeset -g POWERLEVEL9K_INSTANT_PROMPT=quiet
-
 ########################################
 # Powerlevel10k Instant Prompt (FAST)
 ########################################
@@ -105,12 +103,3 @@ alias vim="nvim"
 
 # Load Powerlevel10k config (keep at bottom)
 [[ -f "$HOME/.p10k.zsh" ]] && source "$HOME/.p10k.zsh"
-
-
-########################################
-# Cosmetic: Vertical spacing before prompt
-########################################
-
-precmd() {
-  print ""
-}
