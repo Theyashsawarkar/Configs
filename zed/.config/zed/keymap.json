@@ -51,6 +51,7 @@
       "space b b": "pane::ActivateLastItem",
       "space b d": "pane::CloseActiveItem",
       "space b x": "pane::CloseAllItems",
+      "space b l": "pane::ReopenClosedItem",
 
       // ---------- Pane Management ----------
       "space w h": "pane::SplitHorizontal",
@@ -84,6 +85,9 @@
       // ---------- Movel Line Up or Down ----------
       "alt-shift-k": "editor::MoveLineUp",
       "alt-shift-j": "editor::MoveLineDown",
+
+      // ---------- Diagnostics ----------
+      "space p d": "diagnostics::Deploy",
     },
   },
 
