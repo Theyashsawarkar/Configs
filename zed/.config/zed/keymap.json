@@ -81,6 +81,10 @@
       "space d o": "debugger::StepOut",
       "space d x": "debugger::Stop",
       "space d u": "debug_panel::ToggleFocus",
+      "space d e": "debugger::EvaluateSelectedText",
+      "space d a": "debugger::ClearAllBreakpoints",
+      "space d k": "debugger::StepBack",
+      "space d t": "debugger::FocusTerminal",
 
       // ---------- Movel Line Up or Down ----------
       "alt-shift-k": "editor::MoveLineUp",
