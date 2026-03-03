@@ -12,6 +12,9 @@
   "vertical_scroll_margin": 1,
   "when_closing_with_no_tabs": "keep_window_open",
   "close_on_file_delete": true,
+  "autosave": "on_focus_change",
+  "auto_indent": true,
+  "format_on_save": "on",
 
   /*
    * ==========================================================================
