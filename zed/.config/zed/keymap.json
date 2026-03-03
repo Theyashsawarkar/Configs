@@ -59,8 +59,8 @@
       "space x": "diagnostics::Deploy",
 
       // ---------- Pane Management ----------
-      "space w h": "pane::SplitHorizontal",
-      "space w v": "pane::SplitVertical",
+      "space h": "pane::SplitHorizontal",
+      "space v": "pane::SplitVertical",
       "space w d": "pane::CloseActiveItem",
 
       // ---------- Pane Traversal ----------
