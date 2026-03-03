@@ -33,7 +33,7 @@
       "shift-k": "editor::Hover",
       "space c f": "editor::Format",
       "space c r": "editor::Rename",
-      "space o": "outline::Toggle",
+      "space b o": "outline::Toggle",
       "space c a": "editor::ToggleCodeActions",
 
       // ---------- Navigation & UI ----------
