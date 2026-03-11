@@ -1,4 +1,27 @@
 [
+  {
+    "context": "ProjectPanel",
+    "bindings": {
+      // --- Toggles (Your existing ones) ---
+      "space h": "project_panel::ToggleHideHidden",
+      "space i": "project_panel::ToggleHideGitIgnore",
+      "space e": "workspace::ToggleLeftDock",
+
+      // --- LazyVim Inspired CRUD ---
+      "space a": "project_panel::NewFile",
+      "space r": "project_panel::Rename",
+      "space d": "project_panel::Trash",
+      "space D": "project_panel::Delete", // Permanent delete (bypass trash)
+
+      // --- Clipboard & Manipulation ---
+      "space y": "project_panel::Copy",
+      "space x": "project_panel::Cut",
+      "space p": "project_panel::Paste",
+      "space c": "workspace::CopyRelativePath",
+      "space C": "workspace::CopyPath",
+    },
+  },
+
   /*
    * ==========================================================================
    * GLOBAL / WORKSPACE LEVEL
