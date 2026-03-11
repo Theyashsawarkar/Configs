@@ -48,7 +48,7 @@
       "space f b": "tab_switcher::Toggle",
       "shift-h": "pane::ActivatePreviousItem", // Tab Left
       "shift-l": "pane::ActivateNextItem", // Tab Right
-      "space b b": "pane::ActivateLastItem",
+      "space b b": "pane::AlternateFile",
       "space b d": "pane::CloseActiveItem",
       "space b x": "pane::CloseAllItems",
       "space b l": "pane::ReopenClosedItem",
