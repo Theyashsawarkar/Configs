@@ -44,6 +44,9 @@
       "space e": "project_panel::ToggleFocus",
       "space g": "git_panel::Toggle",
       "space d u": "debug_panel::ToggleFocus",
+
+      "space t": "terminal_panel::Toggle",
+      "space n t": "workspace::NewTerminal",
     },
   },
 
@@ -55,6 +58,8 @@
   {
     "context": "VimControl && !menu",
     "bindings": {
+      "space space": "workspace::Save",
+
       // ---------- LSP / Code Actions ----------
       "shift-k": "editor::Hover",
       "space c f": "editor::Format",
@@ -67,6 +72,8 @@
       "space e": "project_panel::ToggleFocus",
 
       "space g": "git_panel::Toggle",
+      "space t": "terminal_panel::Toggle",
+      "space n t": "workspace::NewTerminal",
 
       // ---------- SEARCH ----------
       "space s g": "pane::DeploySearch",
@@ -149,6 +156,10 @@
     "bindings": {
       "space d u": "debug_panel::ToggleFocus",
 
+      "space t": "terminal_panel::Toggle",
+      "space n t": "workspace::NewTerminal",
+      "space x": "pane::CloseActiveItem",
+
       // ---------- Pane Traversal ----------
       "ctrl-h": "workspace::ActivatePaneLeft",
       "ctrl-l": "workspace::ActivatePaneRight",
@@ -163,3 +174,4 @@
     },
   },
 ]
+
