@@ -101,7 +101,7 @@
       // ---------- Pane Management ----------
       "space h": "pane::SplitHorizontal",
       "space v": "pane::SplitVertical",
-      "space w d": "pane::CloseActiveItem",
+      "space w d": "pane::CloseAllItems",
 
       // ---------- Pane Traversal ----------
       "ctrl-h": "workspace::ActivatePaneLeft",
