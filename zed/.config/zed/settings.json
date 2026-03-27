@@ -13,7 +13,7 @@
   "when_closing_with_no_tabs": "keep_window_open",
   "close_on_file_delete": true,
   "autosave": "on_focus_change",
-  "auto_indent": "syntax_aware",
+  "auto_indent": true,
   "format_on_save": "on",
   "ensure_final_newline_on_save": true,
   "remove_trailing_whitespace_on_save": true,
@@ -47,16 +47,16 @@
       "settings": {
         "typescript": {
           "updateImportsOnFileMove": {
-            "enabled": "always"
-          }
+            "enabled": "always",
+          },
         },
         "javascript": {
           "updateImportsOnFileMove": {
-            "enabled": "always"
-          }
-        }
+            "enabled": "always",
+          },
+        },
       },
-      "enable_lsp_tasks": true
+      "enable_lsp_tasks": true,
     },
     "eslint": {
       "settings": {
@@ -167,4 +167,3 @@
     },
   },
 }
-
