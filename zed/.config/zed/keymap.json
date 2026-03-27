@@ -55,6 +55,11 @@
   {
     "context": "VimControl && !menu",
     "bindings": {
+      "space space": "workspace::Save",
+
+      "space p r": "projects::OpenRecent", // "Project Recent"
+      "space p o": "workspace::Open",
+
       // ---------- LSP / Code Actions ----------
       "shift-k": "editor::Hover",
       "space c f": "editor::Format",
@@ -91,7 +96,7 @@
       // ---------- Pane Management ----------
       "space h": "pane::SplitHorizontal",
       "space v": "pane::SplitVertical",
-      "space w d": "pane::CloseActiveItem",
+      "space w d": "pane::CloseAllItems",
 
       // ---------- Pane Traversal ----------
       "ctrl-h": "workspace::ActivatePaneLeft",
@@ -108,6 +113,8 @@
       // ---------- Debugger (DAP) ----------
       "space d s": "debugger::Start",
       "space d c": "debugger::Continue",
+      "space d C": "debugger::RunToCursor",
+      "space d B": "debugger::StepBack",
       "space d r": "debugger::Rerun",
       "space d b": "editor::ToggleBreakpoint",
       "space d l": "editor::EditLogBreakpoint",
@@ -163,3 +170,4 @@
     },
   },
 ]
+
