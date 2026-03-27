@@ -13,7 +13,7 @@
   "when_closing_with_no_tabs": "keep_window_open",
   "close_on_file_delete": true,
   "autosave": "on_focus_change",
-  "auto_indent": true,
+  "auto_indent": "syntax_aware",
   "format_on_save": "on",
   "ensure_final_newline_on_save": true,
   "remove_trailing_whitespace_on_save": true,
@@ -43,6 +43,21 @@
   ],
   "formatter": "prettier",
   "lsp": {
+    "vtsls": {
+      "settings": {
+        "typescript": {
+          "updateImportsOnFileMove": {
+            "enabled": "always"
+          }
+        },
+        "javascript": {
+          "updateImportsOnFileMove": {
+            "enabled": "always"
+          }
+        }
+      },
+      "enable_lsp_tasks": true
+    },
     "eslint": {
       "settings": {
         "codeActionOnSave": {
@@ -74,7 +89,7 @@
    */
   "theme": {
     "mode": "dark",
-    "light": "One Light",
+    "light": "Ayu Light",
     "dark": "Catppuccin Espresso (Blur) [Heavy]",
   },
   "icon_theme": "Warm Charmed Icons",
@@ -125,7 +140,7 @@
    */
   "theme_overrides": {
     "Catppuccin Espresso (Blur) [Heavy]": {
-      "tab.active_background": "#2a283e55",
+      "tab.active_background": "#2a283e99",
 
       "editor.line_number": "#585273",
       "editor.active_line_number": "#A277FF",
