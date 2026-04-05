@@ -59,6 +59,9 @@
 
       "space p r": "projects::OpenRecent", // "Project Recent"
       "space p o": "workspace::Open",
+      "space f o": "workspace::OpenFiles",
+      "space f n": "workspace::NewFile",
+      "space t n": "workspace::NewCenterTerminal",
 
       // ---------- LSP / Code Actions ----------
       "shift-k": "editor::Hover",
@@ -170,4 +173,3 @@
     },
   },
 ]
-
