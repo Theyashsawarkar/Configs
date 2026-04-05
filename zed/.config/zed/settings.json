@@ -13,7 +13,7 @@
   "when_closing_with_no_tabs": "keep_window_open",
   "close_on_file_delete": true,
   "autosave": "on_focus_change",
-  "auto_indent": true,
+  "auto_indent": "syntax_aware",
   "format_on_save": "on",
   "ensure_final_newline_on_save": true,
   "remove_trailing_whitespace_on_save": true,
@@ -72,9 +72,9 @@
    * TYPOGRAPHY & FONTS
    * ==========================================================================
    */
-  "ui_font_size": 12,
+  "ui_font_size": 16.0,
   "ui_font_family": "ComicShannsMono Nerd Font Mono",
-  "buffer_font_size": 12,
+  "buffer_font_size": 16.0,
   "buffer_font_family": "ComicShannsMono Nerd Font Mono",
   "terminal": {
     "dock": "bottom",
