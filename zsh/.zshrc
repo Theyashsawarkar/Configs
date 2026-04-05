@@ -103,3 +103,5 @@ alias vim="nvim"
 
 # Load Powerlevel10k config (keep at bottom)
 [[ -f "$HOME/.p10k.zsh" ]] && source "$HOME/.p10k.zsh"
+
+eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv zsh)"
