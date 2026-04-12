@@ -69,6 +69,7 @@
       "space c r": "editor::Rename",
       "space b o": "outline::Toggle",
       "space c a": "editor::ToggleCodeActions",
+      "space z": "editor::ToggleSoftWrap",
 
       // ---------- Navigation & UI ----------
       "space f f": "file_finder::Toggle",
