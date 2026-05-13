@@ -47,6 +47,17 @@
     },
   },
 
+  {
+    "context": "EmptyPane || vim_mode == normal  ",
+    "bindings": {
+      "space p r": "projects::OpenRecent", // "Project Recent"
+      "space p o": "workspace::Open",
+      "space f o": "workspace::OpenFiles",
+      "space f n": "workspace::NewFile",
+      "space t n": "workspace::NewCenterTerminal",
+    },
+  },
+
   /*
    * ==========================================================================
    * VIM NORMAL & VISUAL MODE
@@ -57,19 +68,12 @@
     "bindings": {
       "space space": "workspace::Save",
 
-      "space p r": "projects::OpenRecent", // "Project Recent"
-      "space p o": "workspace::Open",
-      "space f o": "workspace::OpenFiles",
-      "space f n": "workspace::NewFile",
-      "space t n": "workspace::NewCenterTerminal",
-
       // ---------- LSP / Code Actions ----------
       "shift-k": "editor::Hover",
       "space c f": "editor::Format",
       "space c r": "editor::Rename",
       "space b o": "outline::Toggle",
       "space c a": "editor::ToggleCodeActions",
-      "space z": "editor::ToggleSoftWrap",
 
       // ---------- Navigation & UI ----------
       "space f f": "file_finder::Toggle",
