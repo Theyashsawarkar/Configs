@@ -4,6 +4,15 @@
    * EDITOR CORE & VIM BEHAVIOR
    * ==========================================================================
    */
+  "outline_panel": {
+    "dock": "left"
+  },
+  "collaboration_panel": {
+    "dock": "left"
+  },
+  "git_panel": {
+    "dock": "left"
+  },
   "vim_mode": true,
   "relative_line_numbers": "enabled",
   "cursor_blink": false,
@@ -25,6 +34,7 @@
    */
   "disable_ai": true,
   "agent": {
+    "dock": "right",
     "button": false,
   },
 
@@ -120,6 +130,7 @@
    * ==========================================================================
    */
   "project_panel": {
+    "dock": "left",
     "hide_gitignore": false,
     "hide_hidden": false,
     "auto_fold_dirs": false,
