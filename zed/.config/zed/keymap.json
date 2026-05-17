@@ -30,14 +30,6 @@
    * ==========================================================================
    */
   {
-    "context": "Workspace",
-    "bindings": {
-      "alt-h": "workspace::ToggleLeftDock",
-      "alt-j": "workspace::ToggleBottomDock",
-      "alt-l": "workspace::ToggleRightDock",
-    },
-  },
-  {
     "context": "EmptyPane || SharedScreen",
     "bindings": {
       "space f": "file_finder::Toggle",
@@ -60,6 +52,20 @@
 
   /*
    * ==========================================================================
+   * DOCK TOGGLES (BULLETPROOF OVERRIDES)
+   * ==========================================================================
+   */
+  {
+    "context": " Workspace || Editor || Terminal || AssistantPanel",
+    "bindings": {
+      "alt-h": "workspace::ToggleLeftDock",
+      "alt-j": "workspace::ToggleBottomDock",
+      "alt-l": "workspace::ToggleRightDock",
+    },
+  },
+
+  /*
+   * ==========================================================================
    * VIM NORMAL & VISUAL MODE
    * ==========================================================================
    */
@@ -67,6 +73,9 @@
     "context": "VimControl && !menu",
     "bindings": {
       "space space": "workspace::Save",
+
+      // ---------- AI & Predictions ----------
+      "space t p": "editor::ToggleEditPrediction",
 
       // ---------- LSP / Code Actions ----------
       "shift-k": "editor::Hover",
