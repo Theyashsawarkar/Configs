@@ -130,6 +130,7 @@
   },
   "toolbar": {
     "quick_actions": false,
+    "breadcrumbs": true,
   },
   "gutter": {
     "min_line_number_digits": 4,
