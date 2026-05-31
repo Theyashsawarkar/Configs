@@ -98,14 +98,11 @@
    * TYPOGRAPHY & FONTS
    * ==========================================================================
    */
-  "ui_font_size": 16.0,
-  "ui_font_family": "ComicShannsMono Nerd Font Mono",
-  "buffer_font_size": 16.0,
-  "buffer_font_family": "ComicShannsMono Nerd Font Mono",
+  "ui_font_size": 12.0,
+  "buffer_font_size": 12.0,
   "terminal": {
     "dock": "bottom",
-    "font_family": "ComicShannsMono Nerd Font Mono",
-    "font_size": 16.0,
+    "font_size": 12.0,
   },
 
   /*
@@ -195,3 +192,4 @@
     },
   },
 }
+
