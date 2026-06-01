@@ -1,63 +1,28 @@
-
 #!/usr/bin/env bash
 set -e
-
 echo "🧪 Preflight checks starting..."
 
-# --------------------------------------------------
-# Ensure we are on Ubuntu
-# --------------------------------------------------
-if ! grep -qi ubuntu /etc/os-release; then
-  echo "❌ This installer is intended for Ubuntu only."
+# 1. Strict OS Detection
+if [ -f /etc/os-release ]; then
+  . /etc/os-release
+  if [ "$ID" != "arch" ]; then
+    echo "❌ OS Mismatch: This installer exclusively supports Arch Linux."
+    echo "Detected OS: $NAME"
+    exit 1
+  fi
+else
+  echo "❌ Cannot determine OS. /etc/os-release is missing."
   exit 1
 fi
+echo "✅ Arch Linux detected."
 
-echo "✅ Ubuntu detected"
-
-# --------------------------------------------------
-# Cache sudo credentials
-# --------------------------------------------------
+# 2. Cache sudo credentials
 echo "🔐 Requesting sudo access..."
 sudo -v
+while true; do sudo -n true; sleep 60; done 2>/dev/null &
 
-# Keep sudo alive during execution
-while true; do
-  sudo -n true
-  sleep 60
-done 2>/dev/null &
+# 3. Synchronize package databases
+echo "📦 Syncing package databases and updating system core..."
+sudo pacman -Syu --noconfirm
 
-# --------------------------------------------------
-# Update package index
-# --------------------------------------------------
-echo "📦 Updating package lists..."
-sudo apt update
-
-# --------------------------------------------------
-# Install nala if missing
-# --------------------------------------------------
-if ! command -v nala >/dev/null 2>&1; then
-  echo "📥 Installing nala..."
-  sudo apt install -y nala
-else
-  echo "✅ nala already installed"
-fi
-
-# --------------------------------------------------
-# Enable Flatpak support
-# --------------------------------------------------
-if ! command -v flatpak >/dev/null 2>&1; then
-  echo "📦 Installing Flatpak..."
-  sudo nala install -y flatpak
-else
-  echo "✅ Flatpak already installed"
-fi
-
-echo "📦 Adding Flathub repository..."
-sudo flatpak remote-add --if-not-exists flathub \
-  https://flathub.org/repo/flathub.flatpakrepo
-
-# --------------------------------------------------
-# Final preflight message
-# --------------------------------------------------
 echo "✅ Preflight complete!"
-echo "➡️  Moving to system package installation..."
